@@ -2,17 +2,17 @@
 #include <clam/CrabDomain.hh>
 #include <clam/RegisterAnalysis.hh>
 #include <crab/config.h>
-#include "pk_pplite.hh"
+#include "dec_int_pk_pplite.hh"
 
 namespace clam {
 #ifdef INCLUDE_ALL_DOMAINS
 #ifdef HAVE_PPLITE
-REGISTER_DOMAIN(clam::CrabDomain::PK_PPLITE, pk_pplite_domain)
+REGISTER_DOMAIN(clam::CrabDomain::DECOUPLED_INT_PK_PPLITE, dec_int_pk_pplite_domain)
 #else
-UNREGISTER_DOMAIN(pk_pplite_domain)
+UNREGISTER_DOMAIN(dec_int_pk_pplite_domain)
 #endif
 #else
-UNREGISTER_DOMAIN(pk_pplite_domain)
+UNREGISTER_DOMAIN(dec_int_pk_pplite_domain)
 #endif
 } // end namespace clam
 

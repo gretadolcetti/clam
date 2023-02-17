@@ -315,13 +315,19 @@ def parseArgs(argv):
                           "- soct: octagons domain using DBMs in Split Normal Form\n"
                           "- oct: octagons domain from Apron or Elina\n"
                           "- pk: polyhedra domain from Apron or Elina\n"
-                          "- pk-pplite: polyhedra domain from PPLite\n"                   
+                          "- pk-pplite: polyhedra domain from PPLite\n"
+                          "- pkset-pplite: sets of polyhedra domain from PPLite\n"
+                          "- dec-int-pk-pplite: decoupled (intervals + polyhedra) domain from PPLite\n"
+                          "- dec-int-pkset-pplite: decoupled (intervals + sets of polyhedra) domain from PPLite\n"
+                          "- dec-pk-pkset-pplite: decoupled (polyhedra + sets of polyhedra) domain from PPLite\n"
                           "- rtz: reduced product of term-dis-int with zones\n"
                           "- w-int: wrapped intervals\n",
                     choices=['int', 'sign-const', 'ric', 'term-int',
                              'dis-int', 'term-dis-int', 'boxes',
-                             'zones', 'soct', 'oct', 'pk', 'pk-pplite', 'rtz',
-                             'w-int'],
+                             'zones', 'soct', 'oct', 'pk',
+                             'pk-pplite', 'pkset-pplite', 'dec-int-pk-pplite',
+                             'dec-int-pkset-pplite', 'dec-pk-pkset-pplite',
+                             'rtz', 'w-int'],
                     dest='crab_dom', default='zones')
     p.add_argument('--crab-dom-params', dest='crab_dom_params', default=None,
                    help="Set abstract domain options STR=\"param1=val1:param2=val2:...\"",
